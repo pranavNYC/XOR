@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XOR - Reimagining Input</title>
+    <style>
+        @font-face {
+            font-family: 'Dot Matrix';
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/monofonto/1.0.0/monofonto-webfont.woff2') format('woff2');
+        }
+        
+        :root {
+            --text: #000000;
+            --background: #ffffff;
+            --accent: #ff0000;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--background);
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Dot Matrix', monospace;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .main-content {
+            padding-top: 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 4rem 2rem;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        .hero-text {
+            padding-right: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin: 0;
+            font-weight: normal;
+            line-height: 1;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .specs-list {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .dot-matrix {
+            font-family: 'Dot Matrix', monospace;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--text);
+            color: var(--background);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .features {
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+        }
+
+        .feature {
+            text-align: left;
+        }
+
+        .feature h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            padding: 4rem 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">XOR</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#specs">Specs</a>
+                <a href="#support">Support</a>
+                <a href="#store">Store</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-text">
+                <div class="dot-matrix">Input, evolved</div>
+                <h1>XOR</h1>
+                <div class="specs-list">
+                    <p>Premium tactile trackpad surface<br>
+                    High-precision side driver<br>
+                    Advanced haptic feedback system<br>
+                    Customizable input profiles<br>
+                    40+ hours of use time<br>
+                    Universal compatibility</p>
+                </div>
+                <a href="#store" class="cta-button">Pre-order now</a>
+            </div>
+            <div class="hero-image">
+                <img src="/api/placeholder/500/500" alt="XOR Adaptive Mouse">
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <div class="dot-matrix">01</div>
+                <h2>Intuitive Control</h2>
+                <p>Large trackpad surface on top for natural, comfortable cursor control using any part of your hand.</p>
+            </div>
+            <div class="feature">
+                <div class="dot-matrix">02</div>
+                <h2>Precision Driver</h2>
+                <p>High-resolution thumb control for pixel-perfect movements and effortless scrolling.</p>
+            </div>
+            <div class="feature">
+                <div class="dot-matrix">03</div>
+                <h2>Adaptive Design</h2>
+                <p>Customizable sensitivity, programmable inputs, and ergonomic support for all users.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>XOR Computing Solutions © 2025</p>
+    </footer>
+</body>
+</html>
