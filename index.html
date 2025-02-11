@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XOR - Reimagining Input</title>
+    <title>XOR - Mouse</title>
     <style>
-        @font-face {
-            font-family: 'Dot Matrix';
-            src: url('https://cdnjs.cloudflare.com/ajax/libs/monofonto/1.0.0/monofonto-webfont.woff2') format('woff2');
-        }
-        
         :root {
             --text: #000000;
             --background: #ffffff;
             --accent: #ff0000;
+            --secondary-bg: #f8f8f8;
         }
         
         body {
@@ -33,6 +29,7 @@
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eaeaea;
         }
 
         nav {
@@ -44,9 +41,9 @@
         }
 
         .logo {
-            font-family: 'Dot Matrix', monospace;
             font-size: 1.5rem;
             letter-spacing: 2px;
+            color: var(--text);
         }
 
         .nav-links {
@@ -68,6 +65,35 @@
             margin: 0 auto;
         }
 
+        .dot-matrix-container {
+            margin: 2rem 0;
+            display: inline-block;
+        }
+
+        .letter {
+            display: inline-block;
+            margin-right: 12px;
+            vertical-align: top;
+        }
+
+        .dot-row {
+            display: flex;
+            gap: 3px;
+            height: 6px;
+            margin-bottom: 3px;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--text);
+            border-radius: 50%;
+        }
+
+        .space {
+            width: 6px;
+        }
+
         .hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -81,11 +107,12 @@
             padding-right: 2rem;
         }
 
-        .hero h1 {
-            font-size: 5rem;
-            margin: 0;
-            font-weight: normal;
-            line-height: 1;
+        .subheading {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            color: var(--accent);
         }
 
         .hero-image {
@@ -103,19 +130,12 @@
             margin-top: 2rem;
             font-size: 0.9rem;
             line-height: 1.8;
-        }
-
-        .dot-matrix {
-            font-family: 'Dot Matrix', monospace;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
-            color: var(--accent);
+            color: var(--text);
         }
 
         .cta-button {
             display: inline-block;
-            background-color: var(--text);
+            background-color: var(--accent);
             color: var(--background);
             padding: 1rem 2rem;
             text-decoration: none;
@@ -130,6 +150,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 4rem;
+            background-color: var(--secondary-bg);
         }
 
         .feature {
@@ -140,6 +161,14 @@
             font-size: 1.5rem;
             font-weight: normal;
             margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .feature-number {
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            color: var(--text);
         }
 
         footer {
@@ -147,6 +176,8 @@
             text-align: center;
             font-size: 0.8rem;
             letter-spacing: 1px;
+            background-color: var(--background);
+            color: var(--text);
         }
 
         @media (max-width: 768px) {
@@ -156,8 +187,9 @@
                 gap: 2rem;
             }
 
-            .hero h1 {
-                font-size: 3rem;
+            .dot-matrix-container {
+                margin: 2rem auto;
+                text-align: center;
             }
 
             .nav-links {
@@ -182,7 +214,7 @@
     <main class="main-content">
         <section class="hero">
             <div class="hero-text">
-                <div class="dot-matrix">Input, evolved</div>
+                <div class="subheading">Input, evolved</div>
                 <div class="dot-matrix-container">
                     <!-- M -->
                     <div class="letter">
@@ -286,23 +318,23 @@
                 <a href="#store" class="cta-button">Pre-order now</a>
             </div>
             <div class="hero-image">
-                <img src="/api/placeholder/500/500" alt="XOR Adaptive Mouse">
+                <img src="/api/placeholder/500/500" alt="XOR Mouse">
             </div>
         </section>
 
         <section class="features">
             <div class="feature">
-                <div class="dot-matrix">01</div>
+                <div class="feature-number">01</div>
                 <h2>Intuitive Control</h2>
                 <p>Large trackpad surface on top for natural, comfortable cursor control using any part of your hand.</p>
             </div>
             <div class="feature">
-                <div class="dot-matrix">02</div>
+                <div class="feature-number">02</div>
                 <h2>Precision Driver</h2>
                 <p>High-resolution thumb control for pixel-perfect movements and effortless scrolling.</p>
             </div>
             <div class="feature">
-                <div class="dot-matrix">03</div>
+                <div class="feature-number">03</div>
                 <h2>Adaptive Design</h2>
                 <p>Customizable sensitivity, programmable inputs, and ergonomic support for all users.</p>
             </div>
@@ -310,7 +342,7 @@
     </main>
 
     <footer>
-        <p>XOR Computing Solutions © 2025</p>
+        <p>XOR © 2025</p>
     </footer>
 </body>
 </html>
